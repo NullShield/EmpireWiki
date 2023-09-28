@@ -1,0 +1,8 @@
+<p>Empire's guide to FREEING other civilizations from their own DEMISE.</p>
+<p>What do you need to know about them.</p>
+
+<app-search-bar 
+    [speciesNameList]="speciesNameList"
+    (selectedData)="getSelectedData($event)">
+</app-search-bar>
+<app-search-result [selectedSpecies]="selectSpecies"></app-search-result>

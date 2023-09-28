@@ -1,0 +1,15 @@
+<div id="dropdown" class="dropdown">
+    <div id="dropdown-icon" class="container" (click)="menuToggle()">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+    <div class="dropdown-elements" (click)="menuToggle()" *ngIf="toggleMenu">
+        <nav>
+            <ul>
+                <li [routerLink]="'./home'">Home</li>
+                <li [routerLink]="'./about'">About</li>
+            </ul>
+        </nav>
+    </div>
+</div>

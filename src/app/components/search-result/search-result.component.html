@@ -1,0 +1,18 @@
+<ng-container *ngIf="selectedSpecies[0].name !== 'N/A'" >
+    <div> {{selectedSpecies[0].name}}</div>
+    <div> {{selectedSpecies[0].classification}}</div>
+    <div> {{selectedSpecies[0].designation}}</div>
+    <div> {{selectedSpecies[0].average_height}}</div>
+    <div> {{selectedSpecies[0].skin_colors}}</div>
+    <div> {{selectedSpecies[0].hair_colors}}</div>
+    <div> {{selectedSpecies[0].eye_colors}}</div>
+    <div> {{selectedSpecies[0].average_lifespan}}</div>
+    <!-- <div> {{selectedSpecies[0].homeworld}}</div> -->
+    <div> {{selectedSpecies[0].language}}</div>
+
+</ng-container>
+<ng-container *ngIf="selectedSpecies[0].name === 'N/A'">
+    <div>So far there is nothing in our vast database. Type above to get info on what you are looking for.</div>
+    <!-- <div> Such a species does not exist. Did you find a new mutation or a synthetic creature?</div>
+    <div> Please contact Commander Thralls Office!</div> -->
+</ng-container>

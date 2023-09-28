@@ -1,0 +1,8 @@
+<input type="text" placeholder="Here to serve the Empire!" [formControl]="fcSearchBar" (keyup)="outPutSelectedData()">
+
+<ng-container *ngIf="showSuggestion">
+    <div class="suggestionBox" *ngFor="let suggestion of suggestions">
+        <button type="button" (click)="setSuggestion(suggestion)">{{suggestion}}</button>
+    </div>
+</ng-container>
+
