@@ -1,18 +1,49 @@
 <ng-container *ngIf="selectedSpecies[0].name !== 'N/A'" >
-    <div> {{selectedSpecies[0].name}}</div>
-    <div> {{selectedSpecies[0].classification}}</div>
-    <div> {{selectedSpecies[0].designation}}</div>
-    <div> {{selectedSpecies[0].average_height}}</div>
-    <div> {{selectedSpecies[0].skin_colors}}</div>
-    <div> {{selectedSpecies[0].hair_colors}}</div>
-    <div> {{selectedSpecies[0].eye_colors}}</div>
-    <div> {{selectedSpecies[0].average_lifespan}}</div>
-    <!-- <div> {{selectedSpecies[0].homeworld}}</div> -->
-    <div> {{selectedSpecies[0].language}}</div>
+    <div class="main-container">
+        <ul class="species" *ngFor="let species of selectedSpecies">
+            <img src='{{"../../../assets/images/" + species.name + ".webp"}}' alt="" />
+            <div class="speciesInfo">
+                <div class="infoTag">Name: </div>
+                <div class="info">{{species.name}}</div>
+            </div>
+            <div class="speciesInfo">
+                <div class="infoTag">Classification: </div>
+                <div class="info">{{species.classification}}</div>
+            </div>
+            <div class="speciesInfo">
+                <div class="infoTag">Designation: </div>
+                <div class="info">{{species.designation}}</div>
+            </div>
+            <div class="speciesInfo">
+                <div class="infoTag">Average Height: </div>
+                <div class="info">{{species.average_height}}</div>
+            </div>
+            <div class="speciesInfo">
+                <div class="infoTag">Skin Colors: </div>
+                <div class="info">{{species.skin_colors}}</div>
+            </div>
+            <div class="speciesInfo">
+                <div class="infoTag">Hair Colors: </div>
+                <div class="info">{{species.hair_colors}}</div>
+            </div>
+            <div class="speciesInfo">
+                <div class="infoTag">Eye Color: </div>
+                <div class="info">{{species.eye_colors}}</div>
+            </div>
+            <div class="speciesInfo">
+                <div class="infoTag">Average lifespan: </div>
+            <div class="info">{{species.average_lifespan}}</div>
+            </div>
+            <div class="speciesInfo">
+                <div class="infoTag"> Language: </div>
+                <div class="info">{{species.language}}</div>
+            </div>
+        </ul>
+    </div>
+
+
 
 </ng-container>
 <ng-container *ngIf="selectedSpecies[0].name === 'N/A'">
     <div>So far there is nothing in our vast database. Type above to get info on what you are looking for.</div>
-    <!-- <div> Such a species does not exist. Did you find a new mutation or a synthetic creature?</div>
-    <div> Please contact Commander Thralls Office!</div> -->
 </ng-container>
