@@ -29,6 +29,7 @@ export class HomeComponent implements OnInit{
     console.log("getAllSpecies");
     this.swDataService.getAllSpeciesData().subscribe((data) => {
       this.species = data.results;
+      this.selectSpecies = this.species;
       this.species.forEach((element) =>{
         this.speciesNameList.push(element.name);
       });
@@ -38,7 +39,7 @@ export class HomeComponent implements OnInit{
     this.selectedData = event;
     this.selectSpecies = this.swDataService.getSelectedSpecies(this.selectedData, this.species);
     if(this.selectSpecies.length === 0){
-      this.selectSpecies.push(new Species);
+      this.selectSpecies = this.species;
     }
   }
 }
