@@ -36,7 +36,6 @@ export class SearchBarComponent {
   setSuggestion(suggestion: string){
     this.fcSearchBar.setValue(suggestion);
     this.outPutSelectedData();
-    this.fcSearchBar.reset();
     this.showSuggestion = false;
   }
 }
