@@ -1,8 +1,9 @@
-<p>Empire's guide to FREEING other civilizations from their own DEMISE.</p>
-<p>What do you need to know about them.</p>
-
-<app-search-bar 
-    [speciesNameList]="speciesNameList"
-    (selectedData)="getSelectedData($event)">
-</app-search-bar>
-<app-search-result [selectedSpecies]="selectSpecies"></app-search-result>
+<div class="empireMessage">
+    <div class="message">Welcome to the Empires number one Database on species in the Galaxy!</div>
+    <div class="message" >FREE other civilizations from their own future DEMISE!</div>
+    <a class="link" [routerLink]="['/wiki']">
+        <div class="messageLink">
+            Get Started
+        </div>
+    </a>
+</div>

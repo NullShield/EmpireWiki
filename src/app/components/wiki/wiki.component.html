@@ -1,0 +1,7 @@
+<p class="searchMessage">Type below if there is a known species that you need to know more about!</p>
+
+<app-search-bar 
+    [speciesNameList]="speciesNameList"
+    (selectedData)="getSelectedData($event)">
+</app-search-bar>
+<app-search-result [selectedSpecies]="selectSpecies"></app-search-result>

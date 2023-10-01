@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AboutComponent } from './about.component';
+import { WikiComponent } from './wiki.component';
 
-describe('AboutComponent', () => {
-  let component: AboutComponent;
-  let fixture: ComponentFixture<AboutComponent>;
+describe('HomeComponent', () => {
+  let component: WikiComponent;
+  let fixture: ComponentFixture<WikiComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [AboutComponent]
+      imports: [WikiComponent]
     });
-    fixture = TestBed.createComponent(AboutComponent);
+    fixture = TestBed.createComponent(WikiComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
