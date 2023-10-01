@@ -1,6 +1,6 @@
+import { HomeComponent } from './../components/home/home.component';
+import { WikiComponent } from './../components/wiki/wiki.component';
 import { Route } from "@angular/router";
-import { WikiComponent } from "./wiki/wiki.component";
-import { HomeComponent } from "./home/home.component";
 
 export const MAIN_ROUTE: Route[] = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
