@@ -5,7 +5,7 @@ import { StarWarsDataService } from 'src/app/services/star-wars-data/star-wars-d
 import { Species } from 'src/app/dto/responses/species';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { SearchResultComponent } from '../search-result/search-result.component';
-
+import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-wiki',
   standalone: true,
@@ -15,24 +15,27 @@ import { SearchResultComponent } from '../search-result/search-result.component'
   styleUrls: ['./wiki.component.less']
 })
 export class WikiComponent implements OnInit{
+  private subscription: Subscription;
+
   species: Species[] = [];
   speciesNameList: string[] = [];
   selectedData = "";
   selectSpecies: Species[] = [];
 
-  constructor(private swDataService: StarWarsDataService){}
-
-  ngOnInit(): void {
-      this.getAllSpecies();
+  constructor(private swDataService: StarWarsDataService){
+    this.subscription = new Subscription();
   }
-  getAllSpecies(){
-    console.log("getAllSpecies");
-    this.swDataService.getAllSpeciesData().subscribe((data) => {
-      this.species = data.results;
+  ngOnInit(): void {
+    this.subscription = this.swDataService.species.subscribe((species) => {
+      console.log("wiki species: " + species);
+      this.species = species;
       this.selectSpecies = this.species;
       this.species.forEach((element) =>{
         this.speciesNameList.push(element.name);
       });
+      if(species[0].name !== "N/A"){
+        this.subscription.unsubscribe();
+      }
     });
   }
   getSelectedData(event: any){

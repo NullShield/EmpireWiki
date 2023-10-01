@@ -6,14 +6,18 @@ import { catchError } from 'rxjs';
 import { SpeciesRespose } from 'src/app/dao/species-response';
 import { PlanetsResponse } from 'src/app/dao/planets-response';
 import { Species } from 'src/app/dto/responses/species';
+import { BehaviorSubject } from 'rxjs';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class StarWarsDataService {
   private endpoint = `${environment.starWarsAPi}`;
+  species: BehaviorSubject<Species[]>;
+
   constructor(private http: HttpClient,
-              private errorService: ErrorHandlerService) { }
+              private errorService: ErrorHandlerService) { 
+    this.species = new BehaviorSubject<Species[]>({} as Species[]);
+  }
+
 
   getAllSpeciesData(){
     console.log("getAllSpeciesData");
