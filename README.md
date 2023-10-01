@@ -11,7 +11,7 @@ This project basically gets information directly from a public star wars api and
 <!-- GETTING STARTED -->
 ## Getting Started
 
-In order to run this project all you need to to is run   ```npm install``` and  ```npm start```
+In order to run this project all you need to to is run   ```npm install``` and  ```ng serve -o```
 
 ### Prerequisites
 
