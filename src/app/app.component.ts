@@ -11,5 +11,4 @@ import { HeaderComponent } from './components/header/header.component';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  title = 'website';
 }

@@ -36,7 +36,7 @@ export class StarWarsDataService {
       })
     );
   }
-  getSelectedSpecies(selectedSpecies: string, speciesList: Species[]){
+  getSelectedSpecies(selectedSpecies: string, speciesList: Species[]): Species[]{
     return speciesList.filter(species => species.name.toLowerCase() === selectedSpecies.toLowerCase());
   }
 }

@@ -4,12 +4,12 @@ import { HeaderComponent } from '../header/header.component';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-website',
+  selector: 'app-main',
   standalone: true,
   imports: [CommonModule, HeaderComponent, RouterModule],
-  templateUrl: './website.component.html',
-  styleUrls: ['./website.component.less']
+  templateUrl: './main.component.html',
+  styleUrls: ['./main.component.less']
 })
-export class WebsiteComponent {
+export class MainComponent {
 
 }
