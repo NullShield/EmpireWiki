@@ -2,8 +2,9 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-This project basically gets information directly from a public star wars api and displays it to the user. The user will be able to help the Empire identifying all those species that need our help!
+This project is a 100% component standalone implementation in Angular.
+The UI was created with Mobile First concept in mind.
+The main functionality is to get directly from a public star wars api, information about species and display it to the user. The user will be able to help the Empire identifying all those species that need our help!
 
 ### Built With
 [![Angular][Angular.io]][Angular-url]
