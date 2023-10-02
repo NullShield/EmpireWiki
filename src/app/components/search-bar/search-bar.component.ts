@@ -18,7 +18,8 @@ export class SearchBarComponent {
   showSuggestion: boolean = false;
 
   getSuggestion(){
-    this.suggestions = this.speciesNameList.filter(species => species.indexOf(this.fcSearchBar.value || "") > -1);
+    let suggestionReceived = this.fcSearchBar.value as string;
+    this.suggestions = this.speciesNameList.filter(species => species.toUpperCase().indexOf(suggestionReceived.toUpperCase() || "") > -1);
     this.showSuggestion = true;
   }
 
