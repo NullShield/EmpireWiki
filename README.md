@@ -12,7 +12,7 @@ The main functionality is to get directly from a public star wars api, informati
 <!-- GETTING STARTED -->
 ## Getting Started
 
-In order to run this project all you need to to is run   ```npm install``` and  ```ng serve -o```
+In order to run this project all you need to do is run   ```npm install``` and  ```ng serve -o```
 
 ### Prerequisites
 
