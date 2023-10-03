@@ -13,6 +13,7 @@ export class SearchResultComponent implements OnInit {
   @Input() selectedSpecies: Species[] = [];
 
   ngOnInit(): void {
+      console.log("selectedSpecies: " + this.selectedSpecies);
       this.selectedSpecies.push(new Species);
   }
 }
