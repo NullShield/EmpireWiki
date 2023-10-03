@@ -2,7 +2,6 @@ import { HeaderComponent } from './../../components/header/header.component';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { StarWarsDataService } from 'src/app/services/star-wars-data/star-wars-data.service';
 import { Species } from 'src/app/dto/responses/species';
 
