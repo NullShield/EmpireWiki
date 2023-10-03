@@ -1,22 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { HeaderComponent } from './../../components/header/header.component';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from '../header/header.component';
 import { RouterModule } from '@angular/router';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { StarWarsDataService } from 'src/app/services/star-wars-data/star-wars-data.service';
 import { Species } from 'src/app/dto/responses/species';
 
 @Component({
-  selector: 'app-website',
+  selector: 'app-main',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, RouterModule, HttpClientModule],
-  providers: [HttpClient, StarWarsDataService],
-  templateUrl: './website.component.html',
-  styleUrls: ['./website.component.less']
+  imports: [CommonModule, HeaderComponent, RouterModule],
+  templateUrl: './main.component.html',
+  styleUrls: ['./main.component.less']
 })
-export class WebsiteComponent implements OnInit{
+export class MainComponent {
   species: Species[] = [];
-
   constructor(private swDataService: StarWarsDataService){}
   
   ngOnInit(): void {
