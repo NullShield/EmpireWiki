@@ -16,7 +16,6 @@ export class StarWarsDataService {
               private errorService: ErrorHandlerService) { }
 
   getAllSpeciesData(){
-    console.log("getAllSpeciesData");
     return this.http.get<SpeciesRespose>(`${this.endpoint}/species`).pipe(
       catchError((error)=> {
         return this.errorService.handleError(

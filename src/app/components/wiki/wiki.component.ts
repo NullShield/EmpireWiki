@@ -26,7 +26,6 @@ export class WikiComponent implements OnInit{
       this.getAllSpecies();
   }
   getAllSpecies(){
-    console.log("getAllSpecies");
     this.swDataService.getAllSpeciesData().subscribe((data) => {
       this.species = data.results;
       this.selectSpecies = this.species;
